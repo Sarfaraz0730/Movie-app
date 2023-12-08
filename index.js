@@ -14,6 +14,7 @@ const getMovieDetails = async(api)=>{
 
 const showMovie =(data)=>{
   movieBox.innerHTML=""
+  
 //  console.log("Dataaa",data.results)
  data.map((item,i)=>{
   console.log("item : ",IMGPATH+item.poster_path)
@@ -22,9 +23,10 @@ const showMovie =(data)=>{
    box.innerHTML =`
    <div id="image"><img id="movie-poster" src=${IMGPATH+item.poster_path} alt=""></div>
    <div id="title"><h2>${item.original_title} </h2><span>Rating: ${item.vote_average}</span>
-   <h4>Overview:</h4> <p>${item.overview}</p>
+   <h4 id="">Release : ${item.release_date}    </h4> <p id="overflow"></p>
    </div>
    `
+  
    movieBox.append(box)
  })
 }
@@ -39,3 +41,5 @@ document.getElementById("search").addEventListener("keyup", function(event){
   }
 })
 getMovieDetails(APIURL)
+
+
