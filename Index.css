@@ -24,6 +24,12 @@
     width: 100%;
    
 }
+#sort-button{
+  height: 40px;
+  width: 80px;
+  border: 1px solid red;
+  color: #fff;
+}
 .container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
